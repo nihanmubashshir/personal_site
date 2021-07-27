@@ -12,20 +12,24 @@
 <body>
 
     <header class="head_section">
-        <input type="checkbox" name="navbar_toggle" id="navbar_toggle_checkbox" class="navbar_toggle">
-        <label for="navbar_toggle_checkbox" class="navbar_toggle_label"><span>X</span></label>
+        
+        <input type="checkbox" name="navbar_toggle" id="navbar_toggle" class="navbar_toggle">
+
+        <label for="navbar_toggle" class="navbar_toggle_label"><span class="navbar_toggle_icon"></span></label>
+        
+        
         <nav class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects_section">Projects</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="#contacts">Contacts</a></li>
 
             </ul>
         </nav>
     </header>
 
-    <section class="welcome">
+    <section class="welcome" id="home">
         
         <div class="about_me"><div class="image">
             
@@ -35,7 +39,7 @@
                 </p>
     </div>
     </section>
-    <section class="projects">
+    <section class="projects" id="projects_section">
         <div class="card_container">
             <div class="card"></div>
             <div class="card_bottom"><p>--icon--</icon></p></div>
@@ -49,7 +53,7 @@
             <div class="card_bottom"><p>--icon--</icon></p></div>
         </div>
     </section>
-    <footer class="bottom_section">
+    <footer class="bottom_section" id="contacts">
         <p>I don't use any social media <br>so email is best for me.</p>
         <div class="email_link">
             <p>mubashshir21r@gmail.com</p><div class="copy_icon"></div>

@@ -1,6 +1,7 @@
 *{
     margin:0px;
     padding:0px;
+    scroll-behavior: smooth;
 }
 
 *,*::before,*::after{
@@ -11,6 +12,9 @@
     --font_color:#323232;
     --accent_color:#9955ffff;
     --box-shadow-default:1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    --size_of_toggle:25px;
+    --stick_color:white;
+    --toggle-color:var(--accent_color);
 
 }
 body{
@@ -24,7 +28,8 @@ body{
     width:100%;
     font-size:1rem;
     line-height: 1.50rem;
-    color:var(--font_color)
+    color:var(--font_color);
+ 
 
 
 }
@@ -65,7 +70,7 @@ nav {
 
 .navbar a {
     text-decoration: none;
-    color:var(--font_color)
+    color:var(--font_color);
     padding:4px;
     margin:5px;
 }
@@ -75,19 +80,78 @@ nav {
 .navbar_toggle{
     display:none;
 }
+
 .navbar_toggle:checked ~ nav{
     transform: scale(1,1);
 }
-.navbar_toggle:checked ~ nav{
-    transform: scale(1,1);
+/* toggle */
+
+label{
+    background-color: var(--toggle-color);
+    width:var(--size_of_toggle);
+    height:var(--size_of_toggle);
+    border-radius:5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       
+    
+}
+.navbar_toggle_icon,.navbar_toggle_icon::after,.navbar_toggle_icon::before{
+    
+   
+    background-color:  var(--stick_color); 
+
+  
+}
+.navbar_toggle_icon{
+
+    display:inline-block;
+    position:relative;
+    transform:rotate(0deg);
+    transition:transform 400ms ease-in-out;
+    width:77.77%;
+    height:13.51%;
+
+    
+}
+.navbar_toggle_icon::after,.navbar_toggle_icon::before{
+    position:absolute;
+    content:"";
+    transform:translate(0,0);
+    transition: transform 400ms ease-in-out;
+    transform:rotate(0deg);
+    height:100%;
+    width:100%;
+    border-radius:5px;
+}
+
+.navbar_toggle_icon::after{
+    top:200%;
+}
+.navbar_toggle_icon::before{
+    bottom:200%;
+}
+.navbar_toggle:checked ~ label .navbar_toggle_icon{
+    
+    transform:rotate(45deg)
+  
+}
+.navbar_toggle:checked ~ label .navbar_toggle_icon::after{
+    transform:translate(0,-200%) rotate(0deg);
+  
+  
+}
+.navbar_toggle:checked ~ label .navbar_toggle_icon::before{
+    transform:translate(0,200%) rotate(90deg);
+  
 }
 .navbar_toggle_label{
-    border:1px solid black;
-    display: inline-flex;
-    margin-left:20px;
- 
-
+    margin:2px 20px;
 }
+/* end of toggle */
+
 
 @media screen and (min-width:480px){
     .head_section{
@@ -171,7 +235,7 @@ nav {
 }
 .card_bottom p{
     padding: 3px;
-    color: rgba(33, 190, 211, 0.8);
+    color: var(--accent_color);
     margin:4px;
     border-radius: 1px;
 
