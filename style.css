@@ -36,7 +36,7 @@ body{
     top:0;
     left:0;
     width:100%;
-    border-bottom:1px solid lightgrey;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
     background-color: white;
 
 }
@@ -46,7 +46,7 @@ nav {
     transform: scale(1,0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
-    border-bottom:1px solid lightgrey;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.089);
     background-color: white;
 
 
@@ -94,6 +94,8 @@ nav {
     }
    nav {
        transform: scale(1,1);
+       box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+       
    }
    .navbar ul{
        display:flex;
