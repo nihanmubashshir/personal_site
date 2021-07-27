@@ -122,14 +122,17 @@ nav {
 .about_me{
     
     max-width: 80vw;
-
+    margin-top:5rem;
     padding:2rem;
-    border-radius: 5px;;
-    box-shadow: var(--box-shadow-default);
+    border-radius: 5px;
+    
 }
 @media screen and (min-width:700px){
     .about_me{
         width:50vw;
+        margin-top:0;
+        box-shadow: var(--box-shadow-default);
+       
     }
 }
 .projects{
