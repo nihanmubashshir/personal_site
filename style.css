@@ -28,6 +28,9 @@ body{
 
 
 }
+h1{
+    color:var(--accent_color)
+}
 /* head section */
 .head_section {
 
@@ -155,7 +158,7 @@ nav {
     width:400px;
     border-radius: 5px;
     box-shadow: var(--box-shadow-default);
-    background-color:#5CA4EA;
+    background-color:var(--accent_color);
    
 }
 .card_bottom{
