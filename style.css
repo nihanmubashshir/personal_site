@@ -62,21 +62,45 @@ nav {
 .navbar {
    
     text-align:center;
-    margin:px 0 10px 0;
+    margin:0px 0 10px 0;
 }
 .navbar ul{
     list-style:none;
+
+}
+.navbar li {
+
+
 }
 
 .navbar a {
     text-decoration: none;
     color:var(--font_color);
     padding:4px;
-    margin:5px;
+   
+    display: inline-block;
+    position: relative;
+}
+.navbar a::after{
+    display:inline-block;
+    background-color:var(--accent_color);
+    content:"";
+    width:100%;
+    height:3px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    border-radius: 2px 2px 0 0;
+    opacity: 0;
+}
+.navbar a:hover::after{
+    opacity: 1;
+    background-color:var(--accent_color);
 }
 .navbar a:hover{
     color:var(--accent_color)
 }
+
 .navbar_toggle{
     display:none;
 }
@@ -173,7 +197,7 @@ label{
 
    }
    .navbar ul li{
-       margin:0.5rem 1rem 0.5rem 2rem;
+       margin:0.1rem 1rem 0rem 2rem;
    }
    .navbar_toggle_label{
        display: none;
